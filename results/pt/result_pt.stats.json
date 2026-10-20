@@ -1,0 +1,19 @@
+{
+  "model": "weights/best.pt",
+  "model_mb": 5.62,
+  "device": "cuda",
+  "imgsz": 640,
+  "conf": 0.25,
+  "iou": 0.7,
+  "frames": 723,
+  "frames_with_detection": 723,
+  "total_objects": 1067,
+  "per_class": {
+    "B3": 1067
+  },
+  "avg_conf": 0.7959,
+  "elapsed_sec": 37.03,
+  "avg_fps": 19.53,
+  "output": "results/pt/result_pt.mp4",
+  "output_h264": true
+}
