@@ -1,0 +1,96 @@
+{
+  "args": {
+    "weights": "weights/best.pt",
+    "models": [
+      "models/best.onnx",
+      "models/best.torchscript"
+    ],
+    "source": "data/armor_raw.mp4",
+    "imgsz": 640,
+    "conf": 0.25,
+    "iou": 0.7,
+    "frames": 73,
+    "warmup": 10,
+    "repeats": 3,
+    "device": "cpu",
+    "outdir": "results/bench_cpu"
+  },
+  "results": [
+    {
+      "name": "baseline_pt",
+      "model": "weights/best.pt",
+      "format": "pt",
+      "size_mb": 5.62,
+      "device": "cpu",
+      "frames": 219,
+      "mean_ms": 34.4,
+      "median_ms": 34.39,
+      "std_ms": 4.04,
+      "min_ms": 24.78,
+      "max_ms": 45.38,
+      "fps": 29.07,
+      "wall_sec": 7.54,
+      "frames_with_detection": 73,
+      "total_objects": 112,
+      "per_class": {
+        "B3": 112
+      },
+      "avg_conf": 0.7949,
+      "is_baseline": true
+    },
+    {
+      "name": "best.onnx",
+      "model": "models/best.onnx",
+      "format": "onnx",
+      "size_mb": 9.74,
+      "device": "cpu",
+      "frames": 219,
+      "mean_ms": 76.03,
+      "median_ms": 79.03,
+      "std_ms": 24.26,
+      "min_ms": 32.17,
+      "max_ms": 140.33,
+      "fps": 13.15,
+      "wall_sec": 16.66,
+      "frames_with_detection": 73,
+      "total_objects": 109,
+      "per_class": {
+        "B3": 109
+      },
+      "avg_conf": 0.8308,
+      "is_baseline": false
+    },
+    {
+      "name": "best.torchscript",
+      "model": "models/best.torchscript",
+      "format": "torchscript",
+      "size_mb": 9.95,
+      "device": "cpu",
+      "frames": 219,
+      "mean_ms": 53.08,
+      "median_ms": 52.1,
+      "std_ms": 7.08,
+      "min_ms": 38.75,
+      "max_ms": 77.07,
+      "fps": 18.84,
+      "wall_sec": 11.63,
+      "frames_with_detection": 73,
+      "total_objects": 113,
+      "per_class": {
+        "B3": 113
+      },
+      "avg_conf": 0.7963,
+      "is_baseline": false
+    }
+  ],
+  "consistency": {
+    "best.onnx": {
+      "box_match_rate": 0.9553571428571429,
+      "kpt_err_px": 2.4659796563264367
+    },
+    "best.torchscript": {
+      "box_match_rate": 1.0,
+      "kpt_err_px": 0.33046511211432517
+    }
+  }
+}

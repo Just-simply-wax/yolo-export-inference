@@ -1,0 +1,19 @@
+{
+  "model": "models/best.torchscript",
+  "model_mb": 9.95,
+  "device": "cpu",
+  "imgsz": 640,
+  "conf": 0.25,
+  "iou": 0.7,
+  "frames": 723,
+  "frames_with_detection": 723,
+  "total_objects": 1077,
+  "per_class": {
+    "B3": 1077
+  },
+  "avg_conf": 0.7974,
+  "elapsed_sec": 62.72,
+  "avg_fps": 11.53,
+  "output": "results/ts/result_ts.mp4",
+  "output_h264": true
+}

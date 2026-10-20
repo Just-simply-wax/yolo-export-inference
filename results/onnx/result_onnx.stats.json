@@ -1,0 +1,20 @@
+{
+  "model": "models/best.onnx",
+  "model_mb": 9.74,
+  "device": "cpu",
+  "imgsz": 640,
+  "conf": 0.25,
+  "iou": 0.7,
+  "frames": 723,
+  "frames_with_detection": 723,
+  "total_objects": 1059,
+  "per_class": {
+    "B3": 1058,
+    "B1": 1
+  },
+  "avg_conf": 0.8219,
+  "elapsed_sec": 87.06,
+  "avg_fps": 8.3,
+  "output": "results/onnx/result_onnx.mp4",
+  "output_h264": true
+}
